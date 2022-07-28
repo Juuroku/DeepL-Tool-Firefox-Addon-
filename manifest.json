@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "deepl_tool",
+	"version": "1.0",
+	
+	"description": "Translate with deepl",
+	"icons": {
+		"512": "icons/icon.png"
+	},
+	"permissions": [
+		"activeTab",
+		"clipboardRead",
+		"contextMenus"
+	],
+	"browser_action": {
+		"default_icon": "icons/icon.png",
+		"default_title": "DeepL Tool",
+		"default_popup": "popup/deepl_tool.html"
+	},
+	"background": {
+		"scripts": [
+			"background/background.js"
+		]
+	}
+}

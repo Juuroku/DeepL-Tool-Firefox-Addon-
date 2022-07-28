@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+	</head>
+	<body>
+		<div id="popup-content">
+			<div class="mx-2 my-2">
+				<h5>Input Text:</h5>
+				<p>
+					<textarea class="form-control" name="input_text" id="input-text"></textarea>
+					<br />
+					<div class="input-group mb-3">
+						<label class="input-group-text" for="source_lang">Source Lang</label>
+						<select class="form-select" id="source_lang">
+							<option value="Auto"> Auto </option>
+							<option value="de">German (DE)</option>
+							<option value="en">English (EN)</option>
+							<option value="es">Spanish (ES)</option>
+							<option value="fr">French (FR)</option>
+							<option value="it">Italian (IT)</option>
+							<option value="ja">Japanese (JA)</option>
+							<option value="nl">Dutch (NL)</option>
+							<option value="pl">Polish (PL)</option>
+							<option value="pt">Portuguese (PT)</option>
+							<option value="ru">Russian (RU)</option>
+							<option value="zh">Chinese (ZH)</option>
+						</select>
+						
+						<label class="input-group-text" for="target_lang">Target Lang</label>
+						<select class="form-select" id="target_lang">
+							<option value="de">German (DE)</option>
+							<option value="en-GB">English - British (EN-GB)</option>
+							<option value="en-US">English - American(EN-US)</option>
+							<option value="es">Spanish (ES)</option>
+							<option value="fr">French (FR)</option>
+							<option value="it">Italian (IT)</option>
+							<option value="ja">Japanese (JA)</option>
+							<option value="nl">Dutch (NL)</option>
+							<option value="pl">Polish (PL)</option>
+							<option value="pt-BR">Portuguese - Brazil (PT-BR)</option>
+							<option value="pt-PT">Portuguese - Portugal (PT-PT)</option>
+							<option value="ru">Russian (RU)</option>
+							<option value="zh">Chinese (ZH)</option>
+						</select>
+					</div>
+					<button type="button" class="btn btn-dark" id="clip" disabled>From Clipboard</button> <button type="button" class="btn btn-dark" id="translate">Translate</button>
+				</p>
+			</div>
+		</div>
+		<div id="error-content">
+		</div>
+		<script src="js/deepl_tool.js"></script>
+	</body>
+</html>
