@@ -1,0 +1,99 @@
+{
+    "extensionName": {
+    	"message": "DeepL Tool",
+        "description": "Name of the extension."
+    },
+    "extensionDescription": {
+        "message": "Translate with deepl.",
+        "description": "Description of the extension."
+    },
+	"Auto": {
+		"message": "Auto Detect",
+		"description": "Description of auto detect option."
+	},
+    
+    "de": {
+        "message": "German",
+        "description": "Name of language 'GE'."
+    },
+    "en": {
+        "message": "English",
+        "description": "Name of language 'EN'."
+    },
+    "en-gb": {
+        "message": "English - British",
+        "description": "Name of language 'EN-GB'."
+    },
+    "en-us": {
+        "message": "English - American",
+        "description": "Name of language 'EN-US'."
+    },
+    "es": {
+        "message": "Spanish",
+        "description": "Name of language 'ES'."
+    },
+    "fr": {
+        "message": "Franch",
+        "description": "Name of language 'FR'."
+    },
+    "it": {
+        "message": "Italian",
+        "description": "Name of language 'IT'."
+    },
+    "ja": {
+        "message": "Japaneses",
+        "description": "Name of language 'JA'."
+    },
+    "nl": {
+        "message": "Dutch",
+        "description": "Name of language 'NL'."
+    },
+    "pl": {
+        "message": "Polish",
+        "description": "Name of language 'PL'."
+    },
+    "pt": {
+        "message": "Portuguese",
+        "description": "Name of language 'PT'."
+    },
+    "pt-br": {
+        "message": "Portugese - Brazil",
+        "description": "Name of language 'PT-BR'."
+    },
+    "pt-pt": {
+        "message": "Protugese - Portugal",
+        "description": "Name of language 'PT-PT'."
+    },
+    "ru": {
+        "message": "Russian",
+        "description": "Name of language 'RU'."
+    },
+    "zh": {
+        "message": "Chinese",
+        "description": "Name of language 'ZH'."
+    },
+    "inst": {
+        "message": "Input Text:",
+        "description": "Instruction of input box."
+    },
+    "clip": {
+        "message": "From Clipboard",
+        "description": "Name of button 'clip'."
+    },
+    "translate": {
+        "message": "Translate",
+        "description": "Name of button 'translate'."
+    },
+	"contextMenu": {
+		"message": "Send to DeepL Tool",
+		"description": "Name of context menu item."
+	},
+	"source": {
+		"message": "Source Lang",
+		"description": "Label of select."
+	},
+	"target": {
+		"message": "Target Lang",
+		"description": "Label of select."
+	}
+}

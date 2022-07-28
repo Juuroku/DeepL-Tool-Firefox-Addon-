@@ -1,0 +1,99 @@
+{
+    "extensionName": {
+    	"message": "DeepL Tool",
+        "description": "擴充套件的名稱。"
+    },
+    "extensionDescription": {
+        "message": "DeepLで翻訳する。",
+        "description": "擴充套件的說明。"
+    },
+	"Auto": {
+		"message": "自動偵測",
+		"description": "自動偵測的選項說明。"
+	},
+    
+    "de": {
+        "message": "德語",
+        "description": "語言「GE」的名稱。"
+    },
+    "en": {
+        "message": "英語",
+        "description": "語言「EN」的名稱。"
+    },
+    "en-gb": {
+        "message": "英語 - 英國",
+        "description": "語言「EN-GB」的名稱。"
+    },
+    "en-us": {
+        "message": "英語 - 美國",
+        "description": "語言「EN-US」的名稱。"
+    },
+    "es": {
+        "message": "西班牙語",
+        "description": "語言「ES」的名稱。"
+    },
+    "fr": {
+        "message": "法語",
+        "description": "語言「FR」的名稱。"
+    },
+    "it": {
+        "message": "義大利語",
+        "description": "語言「IT」的名稱。"
+    },
+    "ja": {
+        "message": "日語",
+        "description": "語言「JA」的名稱。"
+    },
+    "nl": {
+        "message": "荷語",
+        "description": "語言「NL」的名稱。"
+    },
+    "pl": {
+        "message": "波蘭語",
+        "description": "語言「PL」的名稱。"
+    },
+    "pt": {
+        "message": "葡萄牙語",
+        "description": "語言「PT」的名稱。"
+    },
+    "pt-br": {
+        "message": "葡萄牙語 - 巴西",
+        "description": "語言「PT-BR」的名稱。"
+    },
+    "pt-pt": {
+        "message": "葡萄牙語 - 葡萄牙",
+        "description": "語言「PT-PT」的名稱。"
+    },
+    "ru": {
+        "message": "俄羅斯語",
+        "description": "語言「RU」的名稱。"
+    },
+    "zh": {
+        "message": "中文",
+        "description": "語言「ZH」的名稱。"
+    },
+    "inst": {
+        "message": "輸入文字：",
+        "description": "輸入框的指引。"
+    },
+    "clip": {
+        "message": "從剪貼簿",
+        "description": "按鈕「clip」的名稱。"
+    },
+    "translate": {
+        "message": "翻譯",
+        "description": "按鈕「translate」的名稱。"
+    },
+	"contextMenu": {
+		"message": "傳送到 DeepL Tool",
+		"description": "選單項目的名稱。。"
+	},
+	"source": {
+		"message": "來源語言",
+		"description": "Select 的標籤。"
+	},
+	"target": {
+		"message": "目標語言",
+		"description": "Select 的標籤。"
+	}
+}

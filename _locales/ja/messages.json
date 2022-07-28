@@ -1,0 +1,99 @@
+{
+    "extensionName": {
+    	"message": "DeepLツール",
+        "description": "拡張機能の名前です。"
+    },
+    "extensionDescription": {
+        "message": "DeepLで翻訳する。",
+        "description": "拡張機能の説明です。"
+    },
+	"Auto": {
+		"message": "自動判別",
+		"description": "自動判別のオプションの説明です。"
+	},
+    
+    "de": {
+        "message": "ドイツ語",
+        "description": "言語「GE」の名前です。"
+    },
+    "en": {
+        "message": "英語",
+        "description": "言語「EN」の名前です。"
+    },
+    "en-gb": {
+        "message": "英語 - イギリス",
+        "description": "言語「EN-GB」の名前です。"
+    },
+    "en-us": {
+        "message": "英語 - アメリカ",
+        "description": "言語「EN-US」の名前です。"
+    },
+    "es": {
+        "message": "スペイン語",
+        "description": "言語「ES」の名前です。"
+    },
+    "fr": {
+        "message": "フランス語",
+        "description": "言語「FR」の名前です。"
+    },
+    "it": {
+        "message": "イタリア語",
+        "description": "言語「IT」の名前です。"
+    },
+    "ja": {
+        "message": "日本語",
+        "description": "言語「JA」の名前です。"
+    },
+    "nl": {
+        "message": "オランダ語",
+        "description": "言語「NL」の名前です。"
+    },
+    "pl": {
+        "message": "ポーランド語",
+        "description": "言語「PL」の名前です。"
+    },
+    "pt": {
+        "message": "ポルトガル語",
+        "description": "言語「PT」の名前です。"
+    },
+    "pt-br": {
+        "message": "ポルトガル語 - ブラジル",
+        "description": "言語「PT-BR」の名前です。"
+    },
+    "pt-pt": {
+        "message": "ポルトガル語 - ポルトガル",
+        "description": "言語「PT-PT」の名前です。"
+    },
+    "ru": {
+        "message": "ロシア語",
+        "description": "言語「RU」の名前です。"
+    },
+    "zh": {
+        "message": "中国語",
+        "description": "言語「ZH」の名前です。"
+    },
+    "inst": {
+        "message": "テキストを入力：",
+        "description": "入力ボックスの案内です。"
+    },
+    "clip": {
+        "message": "クリップボードから",
+        "description": "ボタン「clip」の名前です。"
+    },
+    "translate": {
+        "message": "翻訳する",
+        "description": "ボタン「translate」の名前です。"
+    },
+	"contextMenu": {
+		"message": "DeepLツールに転送",
+		"description": "コンテクストメニューの項目の名前です。"
+	},
+	"source": {
+		"message": "元の言語",
+		"description": "セレクトのラベルです。"
+	},
+	"target": {
+		"message": "目的の言語",
+		"description": "セレクトのラベルです。"
+	}
+}

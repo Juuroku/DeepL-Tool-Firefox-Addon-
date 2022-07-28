@@ -1,9 +1,10 @@
 {
 	"manifest_version": 2,
-	"name": "deepl_tool",
+	"name": "__MSG_extensionName__",
+	"description": "__MSG_extensionDescription__",
 	"version": "1.0",
+	"homepage_url": "https://github.com/Juuroku/DeepL-Tool-Firefox-Addon-",
 	
-	"description": "Translate with deepl",
 	"icons": {
 		"512": "icons/icon.png"
 	},
@@ -21,5 +22,7 @@
 		"scripts": [
 			"background/background.js"
 		]
-	}
+	},
+	
+	"default_locale": "ja"
 }

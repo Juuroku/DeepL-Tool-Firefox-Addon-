@@ -81,7 +81,7 @@ function reportExecuteScriptError(error) {
 	let error_report = document.createElement("div");
 	
 	error_report.textContent = error.error;
-	error_report.classList.add("mx-2");
+	error_report.classList.add("mx-3");
 	error_report.setAttribute("id", "last-error");
 	
 	el.appendChild(error_report);
@@ -89,6 +89,31 @@ function reportExecuteScriptError(error) {
 	console.error(`Failed while executing add-on "Deepl Tool" : ${error.error}`);
 }
 
+// Localization
+let opts = document.getElementsByTagName("option");
+
+for (opt of opts) {
+	let val = opt.value;
+	let desc = browser.i18n.getMessage(val.toLowerCase());
+	
+	if (desc.length) {
+		opt.text = `${desc} (${val.toUpperCase()})`;
+	}
+}
+
+let inst = browser.i18n.getMessage("inst");
+if (inst.length) document.getElementById("inst").innerText = inst;
+
+let clip_name = browser.i18n.getMessage("clip");
+if (clip_name.length) document.getElementById("clip").innerText = clip_name;
+
+let trans_name = browser.i18n.getMessage("translate");
+if (trans_name.length) document.getElementById("translate").innerText = trans_name;
+
+let sl_label = browser.i18n.getMessage("source");
+if (sl_label.length) document.getElementById("sl-label").innerText = sl_label;
+let tl_label = browser.i18n.getMessage("target");
+if (tl_label.length) document.getElementById("tl-label").innerText = tl_label;
 
 window.addEventListener('error', (e) => reportExecuteScriptError(e));
 listenForClicks();

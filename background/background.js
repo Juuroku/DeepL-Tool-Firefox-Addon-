@@ -9,9 +9,11 @@ function send(tab, str) {
 
 var str = null;
 
+console.log(browser.i18n.getUILanguage());
+
 browser.contextMenus.create({
 	id: "deepl-tool",
-	title: "DeepL Tool",
+	title: browser.i18n.getMessage("contextMenu"),
 	contexts: ["selection"]
 });
 
