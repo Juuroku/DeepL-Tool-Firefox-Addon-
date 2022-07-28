@@ -1,0 +1,22 @@
+name: Telegram Notification Issues
+on:
+  issues
+  
+jobs:
+
+  bulid:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: send message on issue activity
+      uses: appleboy/telegram-action@master
+      with:
+        to: ${{ secrets.TELEGRAM_ID }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+        format: markdown
+        message: |
+           ## Activity of Issue #${{ github.event.issue.number }}:           
+           - Repository: ${{ github.repository }}
+           - Event: ${{ github.event.action }}
+           
+           See Issue: ${{ github.event.issue.bodyUrl }}
