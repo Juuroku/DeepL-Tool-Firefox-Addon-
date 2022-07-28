@@ -1,5 +1,7 @@
 name: Telegram Notification Push
-on:[push]
+on:
+  push
+  
 jobs:
 
   bulid:
