@@ -13,6 +13,7 @@ function deeplPost (str) {
 			}
 			
 			let target = res.deepltool.target;
+			console.log(res, target);
 			if (target === undefined || target == "ui") target = browser.i18n.getUILanguage();
 			
 			var url = `https://api-free.deepl.com/v2/translate?${key}`;
@@ -27,8 +28,8 @@ function deeplPost (str) {
 			xhr.open("POST", url);
 			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 			xhr.onreadystatechange = function() {
+				console.log(xhr.responseText);
 				if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-					console.log(xhr.responseText);
 					try {
 						obj = JSON.parse(xhr.responseText);
 						dl = obj['translations'][0]['detected_source_language'];
@@ -60,8 +61,25 @@ function deeplPost (str) {
 							
 							break;
 						case 400:
+							obj = JSON.parse(xhr.responseText);
+							browser.tabs.query({active: true, currentWindow: true})
+								.then((tabs) => {
+									browser.tabs.sendMessage(tabs[0].id, {'dl': "", 'text': `${result} - ${obj.message}`})
+										.then((response) => {
+											console.log(response);
+										})
+										.catch(errorHandle);
+								});
 						case 404:
 						default:
+							browser.tabs.query({active: true, currentWindow: true})
+								.then((tabs) => {
+									browser.tabs.sendMessage(tabs[0].id, {'dl': "", 'text': `${result}`})
+										.then((response) => {
+											console.log(response);
+										})
+										.catch(errorHandle);
+								});
 							break;
 					}
 				}

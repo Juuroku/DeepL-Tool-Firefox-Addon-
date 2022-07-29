@@ -14,11 +14,6 @@
 		"contextMenus",
 		"storage"
 	],
-	"browser_specific_settings": {
-		"gecko": {
-			"id": "deepl-tool@juuroku"
-		}
-	},
 	"browser_action": {
 		"default_icon": "icons/icon.png",
 		"default_title": "DeepL Tool",
