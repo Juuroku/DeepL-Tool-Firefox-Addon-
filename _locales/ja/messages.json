@@ -88,6 +88,10 @@
 		"message": "DeepLツールに転送",
 		"description": "コンテクストメニューの項目の名前です。"
 	},
+	"contextMenu2": {
+		"message": "DeepL API でページ内翻訳",
+		"description": "コンテクストメニューの項目の名前です。"
+	},
 	"source": {
 		"message": "元の言語",
 		"description": "セレクトのラベルです。"
@@ -95,5 +99,41 @@
 	"target": {
 		"message": "目的の言語",
 		"description": "セレクトのラベルです。"
+	},
+	"contentLang": {
+		"message": "検出言語：",
+		"description": "detect_language 項目の説明です。"
+	},
+	"contentText": {
+		"message": "翻訳結果：",
+		"description": "text 項目の説明です。"
+	},
+	"apiError": {
+		"message": "API エラー",
+		"description": "API calling エラーの説明です。."
+	},
+	"authkeyDesc": {
+		"message": "DeepL API の Auth Key",
+		"description": "auth key 入力の説明です。"
+	},
+	"authkeyPlace": {
+		"message": "Key を所有していない場合は、空白にしてください。",
+		"description": "何を入力かの説明です。"
+	},
+	"ui": {
+		"message": "デフォルト (ブラウザと同じ、サポートされていない可能性があります)",
+		"description": "デフォルト言語オプションの説明です。"
+	},
+	"submit": {
+		"message": "確認",
+		"description": "確認ボタンの説明です。"
+	},
+	"apiNoKey": {
+		"message": "DeepL auth key がありません、オプションページで入力してください。",
+		"description": "キーがないが故に出来たエラーの説明です。"
+	},
+	"apiKeyError": {
+		"message": "Forbidden, auth key が正規じゃない可能性があります",
+		"description": "403 エラーの説明です。"
 	}
 }

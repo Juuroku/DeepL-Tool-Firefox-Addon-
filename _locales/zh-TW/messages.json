@@ -4,7 +4,7 @@
         "description": "擴充套件的名稱。"
     },
     "extensionDescription": {
-        "message": "DeepLで翻訳する。",
+        "message": "使用 DeepL 翻譯文字。",
         "description": "擴充套件的說明。"
     },
 	"Auto": {
@@ -86,7 +86,11 @@
     },
 	"contextMenu": {
 		"message": "傳送到 DeepL Tool",
-		"description": "選單項目的名稱。。"
+		"description": "選單項目的名稱。"
+	},
+	"contextMenu2": {
+		"message": "使用 DeepL API 於頁面內翻譯",
+		"description": "選單項目的名稱。"
 	},
 	"source": {
 		"message": "來源語言",
@@ -95,5 +99,41 @@
 	"target": {
 		"message": "目標語言",
 		"description": "Select 的標籤。"
+	},
+	"contentLang": {
+		"message": "偵測語言：",
+		"description": "detect_language 項目的說明。"
+	},
+	"contentText": {
+		"message": "翻譯結果：",
+		"description": "text 項目的說明。"
+	},
+	"apiError": {
+		"message": "API 錯誤",
+		"description": "API 呼叫錯誤的說明。"
+	},
+	"authkeyDesc": {
+		"message": "DeepL API 的 Auth Key",
+		"description": "auth key 輸入的說明。"
+	},
+	"authkeyPlace": {
+		"message": "若沒有 key，請留白。",
+		"description": "如何輸入的說明。"
+	},
+	"ui": {
+		"message": "預設 (同瀏覽器 UI，可能不支援)",
+		"description": "預設 UI 語言選項的說明。"
+	},
+	"submit": {
+		"message": "確定",
+		"description": "確定按鈕的說明。"
+	},
+	"apiNoKey": {
+		"message": "沒有 DeepL auth key，請到選項頁面輸入。",
+		"description": "沒有 key 造成的錯誤的說明。"
+	},
+	"apiKeyError": {
+		"message": "Forbidden, 可能是非認證之 auth key",
+		"description": "403 錯誤的說明。"
 	}
 }

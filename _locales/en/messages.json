@@ -88,6 +88,10 @@
 		"message": "Send to DeepL Tool",
 		"description": "Name of context menu item."
 	},
+	"contextMenu2": {
+		"message": "DeepL API Inpage Translate",
+		"description": "Name of context menu item."
+	},
 	"source": {
 		"message": "Source Lang",
 		"description": "Label of select."
@@ -95,5 +99,41 @@
 	"target": {
 		"message": "Target Lang",
 		"description": "Label of select."
+	},
+	"contentLang": {
+		"message": "Detect Lang:",
+		"description": "Description of detect_language item."
+	},
+	"contentText": {
+		"message": "Result:",
+		"description": "Description of text item."
+	},
+	"apiError": {
+		"message": "API Error",
+		"description": "Description of API calling error."
+	},
+	"authkeyDesc": {
+		"message": "Auth Key for DeepL API",
+		"description": "Description of auth key input."
+	},
+	"authkeyPlace": {
+		"message": "Leave blank if you do not have a key.",
+		"description": "Description of what to input."
+	},
+	"ui": {
+		"message": "Default (As browser UI, may be not supported)",
+		"description": "Description of default UI language option."
+	},
+	"submit": {
+		"message": "Submit",
+		"description": "Description of submit button."
+	},
+	"apiNoKey": {
+		"message": "No DeepL auth key, please config in options.",
+		"description": "Description of no key error."
+	},
+	"apiKeyError": {
+		"message": "Forbidden, maybe invalid auth key",
+		"description": "Description of 403 error."
 	}
 }
