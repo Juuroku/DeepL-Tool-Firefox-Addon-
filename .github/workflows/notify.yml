@@ -19,6 +19,6 @@ jobs:
            
            Repository: ${{ github.repository }}
            
-           See changes: https://github.com/${{ github.repository }}/commit/${{github.branch}}
+           See changes: ${{ github.event.commits[0].url }}
            
-           ${{ toJSON(github.event.commits) }}
+           ${{ toJSON(github.event) }}
