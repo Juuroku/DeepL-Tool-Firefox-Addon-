@@ -13,9 +13,10 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_ID }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
+        format: markdown
         message: |
            # ${{ github.event.name }}
            ${{ github.actor }} created Release ${{ github.release }}:
            
-           Repository: ${{ github.release.repo }}
+           Repository: ${{ github.repository }}
            Path: ${{ github.event.path }}
