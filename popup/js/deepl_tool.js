@@ -89,6 +89,26 @@ function reportExecuteScriptError(error) {
 	console.error(`Failed while executing add-on "Deepl Tool" : ${error.error}`);
 }
 
+function readSavedOptions() {
+	browser.storage.local.get('deepltool_pop')
+		.then((res) => {
+			let tg = res.deepltool_pop.pop_tg;
+			if (tg !== undefined) document.getElementById("target_lang").value = tg;
+		})
+		.catch((e) => console.log(e.message));
+}
+
+function saveOptions(e) {
+	var sel = document.getElementById("target_lang");
+	let deepltool_pop = {
+		pop_tg: sel.options[sel.selectedIndex].value
+	}
+	browser.storage.local.set({deepltool_pop})
+		.then(() => console.log('Save Success'))
+		.catch((e) => console.log(`Failed: ${e.message}`));
+	e.preventDefault();
+}
+
 // Localization
 let opts = document.getElementsByTagName("option");
 
@@ -100,7 +120,6 @@ for (opt of opts) {
 		opt.text = `${desc} (${val.toUpperCase()})`;
 	}
 }
-
 let inst = browser.i18n.getMessage("inst");
 if (inst.length) document.getElementById("inst").innerText = inst;
 
@@ -116,6 +135,10 @@ let tl_label = browser.i18n.getMessage("target");
 if (tl_label.length) document.getElementById("tl-label").innerText = tl_label;
 
 window.addEventListener('error', (e) => reportExecuteScriptError(e));
+readSavedOptions();
+
+document.getElementById("target_lang").addEventListener('change', saveOptions);
+
 listenForClicks();
 
 var port = browser.runtime.connect({name: "context"});

@@ -2,6 +2,7 @@
 
 ## v1.1.1
 - Add non-supported language message.
+- Target language in popup will automatically set to last selected option now.
 
 ## v1.1 (2022-07-29)
 - Add Japanese, Traditional Chinese locale files.
