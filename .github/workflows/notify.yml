@@ -4,7 +4,7 @@ on:
   
 jobs:
 
-  bulid:
+  telegram:
     name: Build
     runs-on: ubuntu-latest
     steps:
@@ -15,10 +15,11 @@ jobs:
         token: ${{ secrets.TELEGRAM_TOKEN }}
         format: markdown
         message: |
-           # Post Notify
+           **Push Notify**
            ${{ github.actor }} created commit ${{ github.sha }}:
            Commit message: ${{ github.event.commits[0].message }}
            
            Repository: ${{ github.repository }}
            
-           See changes: ${{ github.event.commits[0].url }}
+           ref: ${{ github.ref }}
+           See changes: [click me](${{ github.event.commits[0].url }})
