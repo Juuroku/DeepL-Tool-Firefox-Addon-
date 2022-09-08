@@ -1,6 +1,6 @@
 name: Telegram Notification Issues
 on:
-  issues
+  issues, issue_comment
   
 jobs:
 
@@ -15,8 +15,8 @@ jobs:
         token: ${{ secrets.TELEGRAM_TOKEN }}
         format: markdown
         message: |
-           ## Activity of Issue #${{ github.event.issue.number }}:           
+           **Activity of Issue #${{ github.event.issue.number }}**
            - Repository: ${{ github.repository }}
            - Event: ${{ github.event.action }}
            
-           See Issue: ${{ github.event.issue.bodyUrl }}
+           See Issue: [#${{ github.event.issue.number }}](https://github.com/${{ github.repository }}/issues/${{ github.event.issue.number }})

@@ -4,8 +4,8 @@ on:
   
 jobs:
 
-  bulid:
-    name: Build
+  telegram:
+    name: telegram-notify
     runs-on: ubuntu-latest
     steps:
     - name: send message on release
@@ -15,8 +15,7 @@ jobs:
         token: ${{ secrets.TELEGRAM_TOKEN }}
         format: markdown
         message: |
-           # ${{ github.event.name }}
-           ${{ github.actor }} created Release ${{ github.release }}:
+           **Release Notify**
+           ${{ github.actor }} created Release ${{ github.ref }}:
            
-           Repository: ${{ github.repository }}
-           Path: ${{ github.event.path }}
+           See note : [${{ github.repository }}](https://github.com/${{ github.repository }}/releases/tag/${{ github.ref }})
