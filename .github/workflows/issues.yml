@@ -1,6 +1,6 @@
 name: Telegram Notification Issues
 on:
-  issues, issue_comment
+  [issues, issue_comment]
   
 jobs:
 
