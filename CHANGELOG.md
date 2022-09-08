@@ -1,5 +1,8 @@
 # Changelog of DeepL Tool Add-on
 
+## v1.1.2
+- Add `Enter` event to input textarea.
+
 ## v1.1.1 (2022-08-16)
 - Add non-supported language message.
 - Target language in popup will automatically set to last selected option now.

@@ -5,7 +5,7 @@ on:
 jobs:
 
   telegram:
-    name: Build
+    name: telegram-notify
     runs-on: ubuntu-latest
     steps:
     - name: send message on push
