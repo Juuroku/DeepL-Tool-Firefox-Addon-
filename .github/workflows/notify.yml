@@ -4,22 +4,22 @@ on:
   
 jobs:
 
-  telegram:
-    name: telegram-notify
-    runs-on: ubuntu-latest
-    steps:
-    - name: send message on push
-      uses: appleboy/telegram-action@master
-      with:
-        to: ${{ secrets.TELEGRAM_ID }}
-        token: ${{ secrets.TELEGRAM_TOKEN }}
-        format: markdown
-        message: |
-           **Push Notify**
-           ${{ github.actor }} created commit ${{ github.sha }}:
-           Commit message: ${{ github.event.commits[0].message }}
-           
-           Repository: ${{ github.repository }}
-           
-           ref: ${{ github.ref }}
-           See changes: [click me](${{ github.event.commits[0].url }})
+    telegram:
+        telegram-notify:
+            runs-on: ubuntu-latest
+            steps:
+            - name: String Process
+              id: sp
+              run: | 
+                echo "::set-output name=repo::$(echo "${{ github.repository }}" | sed -r 's/([][>~+{}|\.\*-])/\\\1/g')"
+                echo "::set-output name=commit_msg::$(echo ${{ github.event.head_commit.message }} | sed -r 's/([][>~+{}|\.\*-])/\\\1/g')"
+            - name: send message on push
+              uses: Juuroku/telegram-messaging@master
+              with:
+                telegram-token:  ${{ secrets.TELEGRAM_TOKEN }}
+                telegram-chat: ${{ secrets.TELEGRAM_ID }}
+                message: |
+                    *[${{ steps.sp.outputs.repo }}](${{ github.server_url }}/${{ github.repository }}) Push Event*
+                    REF: ${{ github.ref_name }}
+                    [LATEST COMMIT](${{ github.event.head_commit.url }}): 
+                        ${{ steps.sp.outputs.commit_msg }}

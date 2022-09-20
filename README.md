@@ -32,3 +32,4 @@ There are two ways to install this addon.
 - Close button image from [Uxwing](https://uxwing.com/close-red-icon/)
 - [DeepL API Doc](https://www.deepl.com/docs-api)
 - Mozilla MDN web docs [Browser Extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions)
+- Styling using [Bootstrap](https://getbootstrap.com/).
