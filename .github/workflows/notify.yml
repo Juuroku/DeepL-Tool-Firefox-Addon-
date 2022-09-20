@@ -4,10 +4,9 @@ on:
   
 jobs:
 
-    telegram:
-        telegram-notify:
-            runs-on: ubuntu-latest
-            steps:
+    telegram-notify:
+        runs-on: ubuntu-latest
+        steps:
             - name: String Process
               id: sp
               run: | 
