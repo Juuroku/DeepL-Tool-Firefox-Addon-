@@ -10,8 +10,8 @@ jobs:
             - name: String Process
               id: sp
               run: | 
-                echo "::set-output name=repo::$(echo "${{ github.repository }}" | sed -r 's/([][>~+{}|\.\*-])/\\\1/g')"
-                echo "::set-output name=commit_msg::$(echo ${{ github.event.head_commit.message }} | sed -r 's/([][>~+{}|\.\*-])/\\\1/g')"
+                echo "repo=$(echo "${{ github.repository }}" | sed -r 's/([][>~+{}|\.\*-])/\\\1/g')" >> $GITHUB_OUTPUT
+                echo "commit_msg=$(echo ${{ github.event.head_commit.message }} | sed -r 's/([][>~+{}|\.\*-])/\\\1/g')" >> $GITHUB_OUTPUT
             - name: send message on push
               uses: Juuroku/telegram-messaging@master
               with:
@@ -22,3 +22,5 @@ jobs:
                     REF: ${{ github.ref_name }}
                     [LATEST COMMIT](${{ github.event.head_commit.url }}): 
                         ${{ steps.sp.outputs.commit_msg }}
+                        
+                parse: 'markdown'
