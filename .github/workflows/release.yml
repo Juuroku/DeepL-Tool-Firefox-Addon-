@@ -4,18 +4,18 @@ on:
   
 jobs:
 
-  telegram:
-    name: telegram-notify
+  release-notify:
     runs-on: ubuntu-latest
+    name: send message by telegram bot
     steps:
-    - name: send message on release
-      uses: appleboy/telegram-action@master
-      with:
-        to: ${{ secrets.TELEGRAM_ID }}
-        token: ${{ secrets.TELEGRAM_TOKEN }}
-        format: markdown
-        message: |
-           **Release Notify**
-           ${{ github.actor }} created Release ${{ github.ref }}:
-           
-           See note : [${{ github.repository }}](https://github.com/${{ github.repository }}/releases/tag/${{ github.ref }})
+        - name: Release Notification
+          uses: Juuroku/telegram-messaging@master
+          with:
+            telegram-token:  ${{ secrets.TELEGRAM_TOKEN }}
+            telegram-chat: ${{ secrets.TELEGRAM_ID }}
+            message: |
+               **Release Notify**
+               ${{ github.actor }} created Release ${{ github.ref }}:
+               
+               See note : [${{ github.repository }}](https://github.com/${{ github.repository }}/releases/tag/${{ github.ref }})
+            parse: 'markdown'
