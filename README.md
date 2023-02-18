@@ -1,5 +1,6 @@
 # DeepL Tool (Firefox Addon)
 A Firefox addon using DeepL website to translate.
+[![CodeQL](https://github.com/Juuroku/DeepL-Tool-Firefox-Addon-/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/Juuroku/DeepL-Tool-Firefox-Addon-/actions/workflows/github-code-scanning/codeql)
 
 ## Install
 There are two ways to install this addon.
@@ -8,7 +9,7 @@ There are two ways to install this addon.
   1. Download source code.
   2. Open `about:debugging` in Firerox.
   3. Go to `This Firefox` page and click `Load Temporary Add-on` button.
-  4. Select any file under this repository.
+  4. Select any file under this repository. ([manifest.json](manifest.json) is good)
 
 ## Usage 
 - Use DeepL Website

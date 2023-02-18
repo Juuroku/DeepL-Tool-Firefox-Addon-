@@ -4,19 +4,18 @@ on:
   
 jobs:
 
-  bulid:
-    name: Build
+  issue-notify:
     runs-on: ubuntu-latest
     steps:
-    - name: send message on issue activity
-      uses: appleboy/telegram-action@master
-      with:
-        to: ${{ secrets.TELEGRAM_ID }}
-        token: ${{ secrets.TELEGRAM_TOKEN }}
-        format: markdown
-        message: |
-           **Activity of Issue #${{ github.event.issue.number }}**
-           - Repository: ${{ github.repository }}
-           - Event: ${{ github.event.action }}
-           
-           See Issue: [#${{ github.event.issue.number }}](https://github.com/${{ github.repository }}/issues/${{ github.event.issue.number }})
+        - name: send message on issue activity
+          uses: Juuroku/telegram-messaging@master
+          with:
+            telegram-token:  ${{ secrets.TELEGRAM_TOKEN }}
+            telegram-chat: ${{ secrets.TELEGRAM_ID }}
+            message: |
+               **Activity of Issue #${{ github.event.issue.number }}**
+               - Repository: ${{ github.repository }}
+               - Event: ${{ github.event.action }}
+               
+               See Issue: [#${{ github.event.issue.number }}](${{ github.server_url }}/${{ github.repository }}/issues/${{ github.event.issue.number }})
+            format: 'markdown'
