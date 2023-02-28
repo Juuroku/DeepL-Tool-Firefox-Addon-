@@ -4,7 +4,7 @@
         "description": "Name of the extension."
     },
     "extensionDescription": {
-        "message": "Translate with deepl.",
+        "message": "Translate with DeepL.",
         "description": "Description of the extension."
     },
 	"Auto": {
@@ -33,7 +33,7 @@
         "description": "Name of language 'ES'."
     },
     "fr": {
-        "message": "Franch",
+        "message": "French",
         "description": "Name of language 'FR'."
     },
     "it": {

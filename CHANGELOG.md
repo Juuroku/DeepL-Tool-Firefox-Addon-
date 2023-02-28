@@ -1,5 +1,9 @@
 # Changelog of DeepL Tool Add-on
 
+## v1.1.3
+- Fix misspelling of 'French'.
+- Add some languages in the select.
+
 ## v1.1.2
 - Add `Enter` event to input textarea.
 

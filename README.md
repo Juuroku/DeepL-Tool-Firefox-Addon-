@@ -1,5 +1,5 @@
 # DeepL Tool (Firefox Addon)
-A Firefox addon using DeepL website to translate.
+A Firefox addon using DeepL website to translate.  
 [![CodeQL](https://github.com/Juuroku/DeepL-Tool-Firefox-Addon-/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/Juuroku/DeepL-Tool-Firefox-Addon-/actions/workflows/github-code-scanning/codeql)
 
 ## Install
@@ -21,7 +21,7 @@ There are two ways to install this addon.
 	3. Click 'Translate' button or press `Enter` (use `Shift` + `Enter` for newlines) to open DeepL web.
 - Use DeepL API
 	1. Config your DeepL auth key (free) and target language in the option page.
-	2. Select text in webpage, right click the mouse to display context menu, click 'DeepL API Inpage Translate', and the result will display in right bottom of the page.
+	2. Select text in webpage, right click the mouse to display context menu, click 'DeepL API Inpage Translate', and the result will display in the bottom right corner of the page.
 
 ## Permisions Needed
 - Active Tab
