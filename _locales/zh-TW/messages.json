@@ -72,6 +72,22 @@
         "message": "中文",
         "description": "語言「ZH」的名稱。"
     },
+	"nb": {
+        "message": "挪威語",
+        "description": "語言「NB」的名稱。"
+    },
+    "ko": {
+        "message": "韓文",
+        "description": "語言「KO」的名稱。"
+    },
+    "cs": {
+        "message": "捷克語",
+        "description": "語言「CS」的名稱。"
+    },
+    "da": {
+        "message": "丹麥文",
+        "description": "語言「DA」的名稱。"
+    },
     "inst": {
         "message": "輸入文字：",
         "description": "輸入框的指引。"

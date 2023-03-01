@@ -1,5 +1,8 @@
 # Changelog of DeepL Tool Add-on
 
+## v1.1.4
+- Add some locale strings.
+
 ## v1.1.3
 - Fix misspelling of 'French'.
 - Add some languages in the select.

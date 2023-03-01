@@ -72,6 +72,22 @@
         "message": "Chinese",
         "description": "Name of language 'ZH'."
     },
+	"nb": {
+        "message": "Norwegian",
+        "description": "Name of language 'NB'."
+    },
+    "ko": {
+        "message": "Korean",
+        "description": "Name of language 'KO'."
+    },
+    "cs": {
+        "message": "Czech",
+        "description": "Name of language 'CS'."
+    },
+    "da": {
+        "message": "Danish",
+        "description": "Name of language 'DA'."
+    },
     "inst": {
         "message": "Input Text:",
         "description": "Instruction of input box."

@@ -11,7 +11,6 @@
 		"message": "自動判別",
 		"description": "自動判別のオプションの説明です。"
 	},
-    
     "de": {
         "message": "ドイツ語",
         "description": "言語「GE」の名前です。"
@@ -71,6 +70,22 @@
     "zh": {
         "message": "中国語",
         "description": "言語「ZH」の名前です。"
+    },
+	"nb": {
+        "message": "ノルウェー語",
+        "description": "言語「NB」の名前です。"
+    },
+    "ko": {
+        "message": "韓国語",
+        "description": "言語「KO」の名前です。"
+    },
+    "cs": {
+        "message": "チェコ語",
+        "description": "言語「CS」の名前です。"
+    },
+	"da": {
+        "message": "デンマーク語",
+        "description": "言語「DA」の名前です。"
     },
     "inst": {
         "message": "テキストを入力：",
