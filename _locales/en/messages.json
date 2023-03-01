@@ -151,5 +151,9 @@
 	"apiKeyError": {
 		"message": "Forbidden, maybe invalid auth key",
 		"description": "Description of 403 error."
+	},
+	"noInputError": {
+		"message": "There are no input.",
+		"Description of no input error."
 	}
 }

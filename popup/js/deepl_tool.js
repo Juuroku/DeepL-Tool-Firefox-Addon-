@@ -113,8 +113,8 @@ function checkEnter(e) {
 	var key = window.event.keyCode;
 	
 	if (key === 13 && !e.shiftKey) {
-		translateSubmit();
 		e.preventDefault();
+		translateSubmit();
 	}
 }
 

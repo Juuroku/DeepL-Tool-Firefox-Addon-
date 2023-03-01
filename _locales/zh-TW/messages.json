@@ -151,5 +151,9 @@
 	"apiKeyError": {
 		"message": "Forbidden, 可能是非認證之 auth key",
 		"description": "403 錯誤的說明。"
+	},
+	"noInputError": {
+		"message": "請輸入文字。",
+		"No input錯誤的說明。"
 	}
 }

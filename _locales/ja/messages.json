@@ -150,5 +150,9 @@
 	"apiKeyError": {
 		"message": "Forbidden, auth key が正規じゃない可能性があります",
 		"description": "403 エラーの説明です。"
+	},
+	"noInputError": {
+		"message": "テキストを入力してください。",
+		"No inputエラーの説明です。"
 	}
 }
