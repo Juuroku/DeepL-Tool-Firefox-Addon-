@@ -153,6 +153,6 @@
 	},
 	"noInputError": {
 		"message": "テキストを入力してください。",
-		"No inputエラーの説明です。"
+		"description": "No inputエラーの説明です。"
 	}
 }

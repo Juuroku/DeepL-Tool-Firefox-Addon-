@@ -2,6 +2,7 @@
 
 ## v1.1.4
 - Add some locale strings.
+- Add locale to the error message.
 
 ## v1.1.3
 - Fix misspelling of 'French'.

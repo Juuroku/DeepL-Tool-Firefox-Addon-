@@ -154,6 +154,6 @@
 	},
 	"noInputError": {
 		"message": "There are no input.",
-		"Description of no input error."
+		"description": "Description of no input error."
 	}
 }

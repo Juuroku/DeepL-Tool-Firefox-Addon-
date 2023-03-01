@@ -154,6 +154,6 @@
 	},
 	"noInputError": {
 		"message": "請輸入文字。",
-		"No input錯誤的說明。"
+		"description": "No input錯誤的說明。"
 	}
 }

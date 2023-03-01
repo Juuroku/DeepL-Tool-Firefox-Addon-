@@ -13,7 +13,7 @@ function translateSubmit() {
 	let tl = tl_el.options[tl_el.selectedIndex].value;
 	
 	if (!str.length) {
-		throw 'No Input';
+		throw browser.i18n.getMessage("noInputError");
 	}
 	
 	let url = `https://www.deepl.com/translator#${sl}/${tl}/${encodeURIComponent(str).replaceAll("%2F", "\\%2F").replaceAll("%7C", "\\%7C").replaceAll("%5C", "%5C%5C")}`;
