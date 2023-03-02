@@ -16,7 +16,7 @@ jobs:
                 EOF
                 )
                 MSG2=$(echo "$MSG" | sed -r 's/([][>~+{}|\.\*-])/\\\1/g')
-                echo "commit_msg=$(echo \"$MSG2\")" >> $GITHUB_OUTPUT
+                echo "commit_msg=$MSG2" >> $GITHUB_OUTPUT
             - name: send message on push
               uses: Juuroku/telegram-messaging@master
               with:
