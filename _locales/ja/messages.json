@@ -107,6 +107,10 @@
 		"message": "DeepL API でページ内翻訳",
 		"description": "コンテクストメニューの項目の名前です。"
 	},
+	"contextMenu3": {
+		"message": "選択した文字でタブを開く",
+		"description": "コンテクストメニューの項目の名前です。"
+	},
 	"source": {
 		"message": "元の言語",
 		"description": "セレクトのラベルです。"
@@ -154,5 +158,13 @@
 	"noInputError": {
 		"message": "テキストを入力してください。",
 		"description": "No inputエラーの説明です。"
+	},
+	"optionTargetAPI": {
+		"message": "目的の言語 (サイト内翻訳)",
+		"description": "オプションページの「Target Lang (In-page)」のラベルです。"
+	},
+	"optionTargetDir": {
+		"message": "目的の言語 (直接タブを開く)",
+		"description": "オプションページの「Target Lang (Dir)」のラベルです。"
 	}
 }

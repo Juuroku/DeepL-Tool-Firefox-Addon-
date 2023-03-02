@@ -2,6 +2,12 @@
 A Firefox addon using DeepL website to translate.  
 [![CodeQL](https://github.com/Juuroku/DeepL-Tool-Firefox-Addon-/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/Juuroku/DeepL-Tool-Firefox-Addon-/actions/workflows/github-code-scanning/codeql)
 
+<a href="https://addons.mozilla.org/en-GB/firefox/addon/deepl-tool/" target="_blank">
+<picture>
+	<img alt="Get the Add-on" src="https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg" width="149"/>
+</picture>
+</a>
+
 ## Install
 There are two ways to install this addon.
 - Install it from product page in Firefox Browser Add-ons site. [Link](https://addons.mozilla.org/en-GB/firefox/addon/deepl-tool/)

@@ -108,6 +108,10 @@
 		"message": "DeepL API Inpage Translate",
 		"description": "Name of context menu item."
 	},
+	"contextMenu3": {
+		"message": "Activate DeepL Tab with Selected Text",
+		"description": "Name of context menu item."
+	},
 	"source": {
 		"message": "Source Lang",
 		"description": "Label of select."
@@ -155,5 +159,13 @@
 	"noInputError": {
 		"message": "There are no input.",
 		"description": "Description of no input error."
+	},
+	"optionTargetAPI": {
+		"message": "Target Lang (For In-Page API Translation)",
+		"description": "Lable of 'targ lang (api)' in options page"
+	},
+	"optionTargetDir": {
+		"message": "Target Lang (For Direct Tab Activate)",
+		"description": "Lable of 'targ lang (dir)' in options page"
 	}
 }

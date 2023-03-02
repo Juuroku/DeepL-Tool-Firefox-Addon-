@@ -1,8 +1,10 @@
 function saveOptions(e) {
-	var sel = document.getElementById("target-lang");
+	var sel = document.getElementById("target-lang-api");
+	var sel2 = document.getElementById("target-lang-dir");
 	let deepltool = {
 		authkey: document.getElementById('auth-key').value,
-		target: sel.options[sel.selectedIndex].value
+		target_api: sel.options[sel.selectedIndex].value,
+		target_dir: sel2.options[sel2.selectedIndex].value
 	}
 	browser.storage.local.set({deepltool})
 		.then(() => console.log('Save Success'))
@@ -16,10 +18,13 @@ function readSavedOptions() {
 			let key = res.deepltool.authkey;
 			if (key !== undefined) document.getElementById("auth-key").value = key;
 			
-			let target = res.deepltool.target;
-			let query = `option[value=${target}]`;
-			console.log(query);
-			if (target !== undefined) document.querySelector(query).selected = true;
+			let target_api = res.deepltool.target || res.deepltool.target_api;
+			let target_dir = res.deepltool.target_dir;
+			//let query = `option[value=${target_api}]`;
+			//let query_dir = `option[value=${target_dir}]`;
+			//console.log(query);
+			if (target_api !== undefined) document.getElementById("target-lang-api").value = target_api;
+			if (target_dir !== undefined) document.getElementById("target-lang-dir").value = target_dir;
 		})
 		.catch((e) => console.log(e.message));
 }
@@ -44,7 +49,8 @@ for (opt of opts) {
 let obj = [
 	['auth-key-label', 'authkeyDesc', 'innerText'],
 	['auth-key', 'authkeyPlace', 'placeholder'],
-	['target-lang-label', 'target', 'innerText'],
+	['target-lang-api-label', 'optionTargetAPI', 'innerText'],
+	['target-lang-dir-label', 'optionTargetDir', 'innerText'],
 	['sub', 'submit', 'innerText']
 ];
 

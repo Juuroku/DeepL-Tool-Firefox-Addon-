@@ -13,9 +13,10 @@ jobs:
             telegram-token:  ${{ secrets.TELEGRAM_TOKEN }}
             telegram-chat: ${{ secrets.TELEGRAM_ID }}
             message: |
-               **Activity of Issue #${{ github.event.issue.number }}**
-               - Repository: ${{ github.repository }}
-               - Event: ${{ github.event.action }}
+                **Activity of Issue #${{ github.event.issue.number }}**
+                - Repository: ${{ github.repository }}
+                - Event: ${{ github.event.action }} 
+                
+                See Issue: [#${{ github.event.issue.number }}](${{ github.server_url }}/${{ github.repository }}/issues/${{ github.event.issue.number }})
                
-               See Issue: [#${{ github.event.issue.number }}](${{ github.server_url }}/${{ github.repository }}/issues/${{ github.event.issue.number }})
             parse: 'markdown'

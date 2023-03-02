@@ -108,6 +108,10 @@
 		"message": "使用 DeepL API 於頁面內翻譯",
 		"description": "選單項目的名稱。"
 	},
+	"contextMenu3": {
+		"message": "以選擇的文字開啟分頁",
+		"description": "選單項目的名稱。"
+	},
 	"source": {
 		"message": "來源語言",
 		"description": "Select 的標籤。"
@@ -155,5 +159,13 @@
 	"noInputError": {
 		"message": "請輸入文字。",
 		"description": "No input錯誤的說明。"
+	},
+	"optionTargetAPI": {
+		"message": "目標語言 (網頁內翻譯)",
+		"description": "選項頁面的「Target Lang (In-page)」的標籤。"
+	},
+	"optionTargetDir": {
+		"message": "目標語言 (直接開啟分頁)",
+		"description": "選項頁面的「Target Lang (Dir)」的標籤。"
 	}
 }

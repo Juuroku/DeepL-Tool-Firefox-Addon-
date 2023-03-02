@@ -12,7 +12,7 @@ function deeplPost (str) {
 				throw new Error(browser.i18n.getMessage("apiNoKey"));
 			}
 			
-			let target = res.deepltool.target;
+			let target = res.deepltool.target || res.deepltool.target_api;
 			console.log(res, target);
 			if (target === undefined || target == "ui") target = browser.i18n.getUILanguage();
 			
@@ -105,6 +105,45 @@ function deeplPost (str) {
 	return;
 }
 
+function deeplTab(str) {
+	
+	browser.storage.local.get('deepltool')
+		.then((res) => {
+			let target = res.deepltool.target_dir;
+			if (target === undefined || target == "ui") target = browser.i18n.getUILanguage();
+			let url = `https://www.deepl.com/translator#$auto/${target}/${encodeURIComponent(str).replaceAll("%2F", "\\%2F").replaceAll("%7C", "\\%7C").replaceAll("%5C", "%5C%5C")}`;
+			let querying = browser.tabs.query({currentWindow: true, windowType: "normal", active: true});
+			querying.then((tabs) => {
+				index = tabs[0].index;
+				id = tabs[0].id;
+				
+				browser.tabs.create({
+					url: url,
+					active: true,
+					index: index + 1,
+					openerTabId: id
+				});
+			}, (reason) => {
+				console.log(reason);
+			});
+		})
+		.catch((e) => {
+			try {
+				browser.tabs.query({active: true, currentWindow: true})
+					.then((tabs) => {
+						browser.tabs.sendMessage(tabs[0].id, {'dl': "", 'text': `${result} - ${e.message}`})
+							.then((response) => {
+								console.log(response);
+							})
+							.catch(errorHandle);
+					});
+			} catch (e) {
+				result += `
+				${e.message}`;
+			}
+		});
+}
+
 var str = null;
 var apiRes = null;
 
@@ -122,6 +161,13 @@ browser.contextMenus.create({
 	contexts: ["selection"]
 });
 
+browser.contextMenus.create({
+	id: "deepl-dir",
+	title: browser.i18n.getMessage("contextMenu3"),
+	contexts: ["selection"]
+});
+
+
 browser.contextMenus.onClicked.addListener((info, tab) => {
 	// get text from selection
 	str = info.selectionText;
@@ -136,6 +182,10 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
 			deeplPost(str);
 			console.log('test');
 			str = null;
+			break;
+		case 'deepl-dir':
+			console.log('dir');
+			deeplTab(str);
 			break;
 	}
 });
