@@ -1,5 +1,9 @@
 # Changelog of DeepL Tool Add-on
 
+## v1.2
+- Add a context menu item to directly open DeepL site without open popup.
+- Update some text in options page.
+
 ## v1.1.4
 - Add some locale strings.
 - Add locale to the error message.
