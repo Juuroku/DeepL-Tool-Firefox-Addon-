@@ -11,14 +11,6 @@ jobs:
               id: sp
               run: | 
                 echo "repo=$(echo "${{ github.repository }}" | sed -r 's/([][\(\)>~+{}|\.\*-])/\\\1/g')" >> $GITHUB_OUTPUT
-                MSG=$(cat << EOF
-                ${{ github.event.head_commit.message }}
-                EOF
-                )
-                MSG2=$(echo "$MSG" | sed -r 's/([][\(\)>~+{}|\.\*-])/\\\1/g')
-                echo "commit_msg<<EOF" >> $GITHUB_OUTPUT
-                echo "$MSG2" >> $GITHUB_OUTPUT
-                echo "EOF" >> $GITHUB_OUTPUT
             - name: send message on push
               uses: Juuroku/telegram-messaging@master
               with:
@@ -28,6 +20,8 @@ jobs:
                     *[${{ steps.sp.outputs.repo }}](${{ github.server_url }}/${{ github.repository }}) Push Event*
                     REF: ${{ github.ref_name }}
                     [LATEST COMMIT](${{ github.event.head_commit.url }}): 
-                        ${{ steps.sp.outputs.commit_msg }}
+                    ```
+                    ${{ github.event.head_commit.message }}
+                    ```
                         
                 parse: 'markdown'
