@@ -1,6 +1,8 @@
 function getTrans(request, sender, sendResponse) {
-	
-	if (document.getElementById('deepl-tool-box') == null) {
+	if (request.alert) {
+		alert("DeepL Tool Error: " + request.text);
+	}
+	else if (document.getElementById('deepl-tool-box') == null) {
 		var el = document.createElement('div');
 
 		el.setAttribute('id', 'deepl-tool-box');

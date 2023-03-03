@@ -1,5 +1,8 @@
 # Changelog of DeepL Tool Add-on
 
+## v1.2.1
+- Fix the bug that unsaved options causing error when click on third context menu item.
+
 ## v1.2
 - Add a context menu item to directly open DeepL site without open popup.
 - Update some text in options page.

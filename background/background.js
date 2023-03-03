@@ -105,43 +105,35 @@ function deeplPost (str) {
 	return;
 }
 
-function deeplTab(str) {
-	
-	browser.storage.local.get('deepltool')
-		.then((res) => {
-			let target = res.deepltool.target_dir;
-			if (target === undefined || target == "ui") target = browser.i18n.getUILanguage();
-			let url = `https://www.deepl.com/translator#$auto/${target}/${encodeURIComponent(str).replaceAll("%2F", "\\%2F").replaceAll("%7C", "\\%7C").replaceAll("%5C", "%5C%5C")}`;
-			let querying = browser.tabs.query({currentWindow: true, windowType: "normal", active: true});
-			querying.then((tabs) => {
-				index = tabs[0].index;
-				id = tabs[0].id;
-				
-				browser.tabs.create({
-					url: url,
-					active: true,
-					index: index + 1,
-					openerTabId: id
-				});
-			}, (reason) => {
-				console.log(reason);
-			});
-		})
-		.catch((e) => {
-			try {
-				browser.tabs.query({active: true, currentWindow: true})
-					.then((tabs) => {
-						browser.tabs.sendMessage(tabs[0].id, {'dl': "", 'text': `${result} - ${e.message}`})
-							.then((response) => {
-								console.log(response);
-							})
-							.catch(errorHandle);
-					});
-			} catch (e) {
-				result += `
-				${e.message}`;
-			}
+async function deeplTab(str) {
+	let target = "ui";
+	try {
+		res = await browser.storage.local.get('deepltool');
+		console.log(res);
+		if (res.deepltool != undefined) target = res.deepltool.target_dir;
+		if (target == undefined) target = "ui";
+		console.log(target);
+			
+	} catch(e) {
+		console.log(e.message);
+		res = {"deepltool": {}};
+	}
+	if (target === undefined || target == "ui") target = browser.i18n.getUILanguage();
+	let url = `https://www.deepl.com/translator#$auto/${target}/${encodeURIComponent(str).replaceAll("%2F", "\\%2F").replaceAll("%7C", "\\%7C").replaceAll("%5C", "%5C%5C")}`;
+	let querying = browser.tabs.query({currentWindow: true, windowType: "normal", active: true});
+	querying.then((tabs) => {
+		index = tabs[0].index;
+		id = tabs[0].id;
+		
+		browser.tabs.create({
+			url: url,
+			active: true,
+			index: index + 1,
+			openerTabId: id
 		});
+	}, (reason) => {
+		console.log(reason);
+	});
 }
 
 var str = null;
