@@ -7,16 +7,20 @@ jobs:
   issue-notify:
     runs-on: ubuntu-latest
     steps:
+        - name: String Process
+              id: sp
+              run: | 
+                echo "repo=$(echo "${{ github.repository }}" | sed -r 's/([][\(\)\#>~+{}|\.\*-])/\\\1/g')" >> $GITHUB_OUTPUT
         - name: send message on issue activity
           uses: Juuroku/telegram-messaging@master
           with:
             telegram-token: ${{ secrets.TELEGRAM_TOKEN }}
             telegram-chat: ${{ secrets.TELEGRAM_ID }}
             message: |
-                **Activity of Issue #${{ github.event.issue.number }}**
-                Repository: ${{ github.repository }}
+                **Activity of Issue \#${{ github.event.issue.number }}**
+                Repository: ${{ steps.sp.outputs.repo }}
                 Event: ${{ github.event.action }} 
                 
-                See Issue: [#${{ github.event.issue.number }}](${{ github.server_url }}/${{ github.repository }}/issues/${{ github.event.issue.number }})
+                See Issue: [\#${{ github.event.issue.number }}](${{ github.server_url }}/${{ github.repository }}/issues/${{ github.event.issue.number }})
                
             parse: 'markdown'
