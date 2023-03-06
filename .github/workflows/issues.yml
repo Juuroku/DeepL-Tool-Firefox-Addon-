@@ -17,7 +17,7 @@ jobs:
             telegram-token: ${{ secrets.TELEGRAM_TOKEN }}
             telegram-chat: ${{ secrets.TELEGRAM_ID }}
             message: |
-                **Activity of Issue \#${{ github.event.issue.number }}**
+                *Activity of Issue \#${{ github.event.issue.number }}*
                 Repository: ${{ steps.sp.outputs.repo }}
                 Event: ${{ github.event.action }} 
                 
